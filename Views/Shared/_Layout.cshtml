@@ -1,0 +1,291 @@
+﻿<!-- =========================================================
+     MAIN LAYOUT FILE
+     Shared layout for entire website
+     File: _Layout.cshtml
+========================================================= -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <!-- Character Encoding -->
+    <meta charset="utf-8" />
+
+    <!-- Responsive Website Support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Dynamic Page Title -->
+    <title>
+        @ViewData["Title"] - SoftTeachInventors
+    </title>
+
+
+
+    <!-- =====================================================
+         CSS FILES
+    ====================================================== -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+          href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- Custom Website CSS -->
+    <link rel="stylesheet"
+          href="~/css/site.css"
+          asp-append-version="true" />
+
+    <!-- ASP.NET Generated Styles -->
+    <link rel="stylesheet"
+          href="~/SoftTeachInventors.styles.css"
+          asp-append-version="true" />
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet"
+           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet"
+           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+
+
+
+<body>
+
+    <!-- ==========================================
+     TOP BLUE BAR START
+========================================== -->
+
+<div class="top-bar">
+
+    <div class="top-left">
+
+        <span>
+            📧 softteachinventors@gmail.com
+        </span>
+
+        <span>
+            📞 +91 9246287329
+        </span>
+
+    </div>
+
+    <div class="top-right">
+
+        <a href="#">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a href="#">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="#">
+            <i class="fab fa-youtube"></i>
+        </a>
+
+        <a href="#">
+            <i class="fab fa-x-twitter"></i>
+        </a>
+
+        <a href="#">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+    </div>
+
+</div>
+
+<!-- ==========================================
+     TOP BLUE BAR END
+========================================== -->
+<!-- ==========================================
+     WHITE NAVBAR START
+========================================== -->
+
+<nav class="custom-navbar">
+
+    <!-- LOGO -->
+
+    <div class="logo">
+
+        <a href="#">
+
+            <div class="logo-top">
+
+                <span class="soft">Soft</span>
+
+                <span class="teach">Teach</span>
+
+            </div>
+
+            <div class="logo-line"></div>
+
+            <div class="logo-bottom">
+
+                inventors
+
+            </div>
+
+        </a>
+
+    </div>
+
+    <!-- MENU -->
+
+    <ul class="nav-menu">
+
+        <li><a asp-controller ="home" asp-action="index">Home</a></li>
+
+        <li><a asp-controller ="home" asp-action="About">About</a></li>
+        
+        <li><a asp-controller ="home" asp-action="books">Books</a></li>
+        
+        <li><a asp-controller ="home" asp-action="Programs">Programs</a></li>
+
+        <li><a asp-controller ="home" asp-action="Technology">Technology</a></li>
+        
+        <li><a asp-controller="Home" asp-action="Gallery">Gallery</a></li>
+
+        <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
+
+    </ul>
+
+    <!-- BUTTON -->
+
+    <a href="https://wa.me/919246287329"
+       target="_blank"
+       class="whatsapp-btn">
+
+        WhatsApp
+
+    </a>
+
+</nav>
+
+<!-- ==========================================
+     WHITE NAVBAR END
+========================================== -->
+
+<!-- =====================================================
+         MAIN WEBSITE CONTENT START
+         Dynamic page content renders here
+====================================================== -->
+
+    <main role="main">
+
+        @RenderBody()
+
+    </main>
+    <!-- =========================================
+   PROFESSIONAL FOOTER START
+========================================= -->
+
+<footer class="pro-footer">
+
+    <div class="footer-container">
+       
+        <!-- LEFT -->
+        <div class="footer-box">
+
+            <h2>Contact Us</h2>
+
+            <p><span>Email :</span> softteachinventors@gmail.com</p>
+
+            <p><span>Call / WhatsApp :</span> +91 9246287329</p>
+
+            <p><span>Phone :</span> +91 9666762692</p>
+
+            <p><span>Timings :</span> 8:00 AM to 6:00 PM</p>
+
+        </div>
+
+        <!-- CENTER -->
+        <div class="footer-box">
+
+            <h2>Head Office</h2>
+
+            <p>
+                Soft Teach Inventors<br>
+                Vinayaka Hills,<br>
+                Phase - 3, Road No. 3,<br>
+                Hyderabad - 500058
+            </p>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="footer-box">
+
+            <h2>Quick Links</h2>
+
+            <ul>
+
+                <li><a href="#">Home</a></li>
+
+                <li><a href="#">preschool</a></li>
+
+                <li><a href="#">Programs</a></li>
+
+                <li><a href="#">Contact</a></li>
+
+            </ul>
+        </div>
+
+        </div> <!-- footer-container end -->
+
+        <div class="footer-social">
+
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            </div>     
+   
+        </div>
+
+    <!-- COPYRIGHT -->
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Soft Teach Inventors. All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+<!-- =========================================
+    PROFESSIONAL FOOTER END
+========================================= -->
+
+    <!-- JAVASCRIPT FILES-->
+
+    <!-- jQuery Library -->
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="~/js/site.js"
+            asp-append-version="true"></script>
+
+
+
+    <!-- Optional Additional Scripts -->
+    @await RenderSectionAsync("Scripts", required: false)f
+
+</body>
+
+</html>

@@ -1,0 +1,2058 @@
+/* ==========================================
+   TOP BLUE BAR START
+========================================== */
+
+.top-bar {
+    background: #1e3a8a;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    font-size: 14px;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:10000;
+}
+
+.top-left {
+    display: flex;
+    gap: 25px;
+}
+
+.top-right {
+    display: flex;
+    gap: 15px;
+}
+
+    .top-right a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+/* ==========================================
+   TOP BLUE BAR END
+========================================== */
+
+/* ==========================================
+   WHITE NAVBAR START
+========================================== */
+
+.custom-navbar {
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 50px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    position: fixed;
+    top: 42px;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    }
+
+/* LOGO */
+
+.logo a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-top {
+    display: flex;
+    gap: 8px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.soft {
+    color: #e56c8f;
+}
+
+.teach {
+    color: #2d3559;
+}
+
+.logo-line {
+    width: 125px;
+    height: 3px;
+    background: #2d3559;
+    margin: 4px 0;
+}
+
+.logo-bottom {
+    font-size: 9px;
+    font-weight:600;
+    letter-spacing: 8px;
+    color: #555;
+}
+
+/* MENU */
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin-left: auto;
+    margin-right:20px;
+    padding: 0;
+}
+
+    .nav-menu li a {
+        text-decoration: none;
+        color: #1e2a5a;
+        font-size: 17px;
+        font-weight: 700;
+        transition: 0.3s;
+    }
+
+        .nav-menu li a:hover {
+            color: #0d6efd;
+        }
+
+/* BUTTON */
+
+.whatsapp-btn {
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+    .whatsapp-btn:hover {
+        color: white;
+    }
+
+    body{
+        padding-top:110px;
+    }
+/* ==========================================
+   MENU HOVER EFFECT
+========================================== */
+
+.nav-menu li a {
+    position: relative;
+}
+
+    .nav-menu li a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        width: 0;
+        height: 3px;
+        background: #0d6efd;
+        border-radius: 10px;
+        transition: 0.3s ease;
+    }
+
+    .nav-menu li a:hover {
+        color: #0d6efd;
+        transform: translateY(-2px);
+    }
+
+        .nav-menu li a:hover::after {
+            width: 100%;
+        }
+
+/* ==========================================
+   WHITE NAVBAR END
+========================================== */
+/* ================================= */
+/* HERO SLIDER SECTION START */
+/* ================================= */
+
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+}
+
+/* EACH SLIDE */
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+    /* ACTIVE SLIDE */
+
+    .slide.active {
+        opacity: 1;
+    }
+
+/* HERO CONTENT */
+
+.hero-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background: rgba(0,0,0,0.4);
+    /* IMPORTANT */
+    padding: 10px 20px;
+}
+
+    /* HERO TITLE */
+
+    .hero-content h1 {
+        font-size: 80px;
+        margin-bottom: 20px;
+        font-weight: 800;
+        text-shadow: 0 5px 20px rgba(0,0,0,0.4);
+        animation: fadeUp 1s ease;
+    }
+    /* HERO SUBTITLE */
+
+    .hero-content p {
+        font-size: 28px;
+        margin-bottom: 30px;
+        animation:fadeUp 1.5s ease;
+    }
+
+/* HERO BUTTON */
+
+.hero-btn {
+    padding: 16px 40px;
+    background: #ff4fa3;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    animation: fadeUp 2s ease;
+}
+
+    .hero-btn:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 25px rgba(255,79,163,0.4);
+    }
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===================================
+   HERO SLIDER SECTION END
+===================================== */
+
+
+/* =========================================
+   WHY SECTION START
+========================================= */
+.why-section {
+    background: linear-gradient(rgba(255,255,255,0.70), rgba(255,255,255,0.70)), url('/images/bg.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 70px 0 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.why-text {
+    margin-bottom: 40px;
+}
+
+    .why-text h1 {
+        font-size: 54px;
+        font-weight: 800;
+        color: #0d47a1;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+    }
+
+    .why-text p {
+        font-size: 18px;
+        color: #444;
+        max-width: 900px;
+    }
+
+.why-section .row {
+    align-items: center;
+}
+
+.why-box {
+    background: linear-gradient(135deg,#0d6efd,#2f7bff);
+    color: white;
+    padding: 25px 20px;
+    border-radius: 20px;
+    height: 100%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+}
+
+    .why-box h2 {
+        font-size: 48px;
+        font-weight: 800;
+        line-height: 1.2;
+        margin-bottom: 25px;
+    }
+
+    .why-box p {
+        font-size: 20px;
+        line-height: 1.8;
+    }
+
+.why-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 35px;
+    background: white;
+    color: #0d6efd;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+    .why-btn:hover {
+        background: #e9f2ff;
+        color: #0d6efd;
+    }
+
+.why-card {
+    background: rgba(255,255,255,0.35);
+    backdrop-filter: blur(8px);
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 20px;
+    height: 100%;
+    transition: 0.4s;
+    border: 1px solid rgba(255,255,255,0.4);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+    .why-card:hover {
+        transform: translateY(-6px);
+        background: rgba(255,255,255,0.55);
+    }
+
+    .why-card i {
+        font-size: 45px;
+        color: #0d6efd;
+        margin-bottom: 25px;
+        display: block;
+    }
+
+    .why-card h3 {
+        color: #0d6efd;
+        font-size: 26px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        line-height: 1.3;
+    }
+
+    .why-card p {
+        font-size: 16px;
+        color: #444;
+        line-height: 1.7;
+    }
+
+.why-slider {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.why-content {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background: rgba(0,0,0,0.4);
+}
+
+.why-section {
+    margin-top: 0px;
+    padding-top: 100px;
+}
+
+.why-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    background: rgba(0,0,0,0.4);
+    padding-top: 80px;
+}
+
+.why-section {
+    background: url('/images/why.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    padding: 70px 0;
+    min-height: auto;
+    position: relative;
+    margin-top: 10px;
+}
+.why-text {
+    margin-bottom: 35px;
+}
+.why-overlay {
+    background: transparent !important;
+    padding: 0 !important;
+}
+
+.why-box {
+    background: #0d6efd;
+    color: white;
+    padding: 25px;
+    border-radius: 20px;
+}
+
+    .why-box h2 {
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .why-box p {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+.why-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    background: white;
+    color: #0d6efd;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.info-card {
+    background: rgba(255,255,255,0.92);
+    padding: 40px 25px;
+    text-align: center;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    height: 100%;
+    transition: 0.3s;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+}
+
+    .info-card:hover {
+        transform: translateY(-10px);
+        background: white;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.20);
+    }
+
+    .info-card h3 {
+        color: #0d6efd;
+        font-size: 28px;
+        margin-bottom: 15px;
+        font-weight: bold;
+    }
+
+    .info-card p {
+        color: #555;
+        font-size: 16px;
+    }
+
+/* =========================================================
+   WHY SECTION END
+========================================================= */
+
+/* =========================
+   ABOUT US SECTION START
+========================= */
+
+.about-section {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+}
+
+.about-content {
+    padding-left: 30px;
+}
+
+    .about-content h2 {
+        font-size: 54px;
+        font-weight: 800;
+        color: #0d47a1;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+    }
+
+    .about-content p {
+        font-size: 15px;
+        line-height: 1.8;
+        color: #555;
+    }
+
+.about-item {
+    margin-top: 30px;
+}
+
+    .about-item h4 {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: #1e2a5a;
+    }
+
+    .about-item p {
+        font-size: 15px;
+        color: #666;
+    }
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width:768px) {
+
+    .about-content {
+        padding-left: 0;
+        margin-top: 40px;
+    }
+
+        .about-content h2 {
+            font-size: 38px;
+        }
+
+    .about-item h4 {
+        font-size: 24px;
+    }
+}
+/* ============================
+   ABOUT US SECTION END
+=============================== */
+
+/* =====================================================
+   FOUNDER MESSAGE SECTION START
+===================================================== */
+.founder-section {
+    padding: 100px 10%;
+    background: #f8f9ff;
+}
+
+.founder-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+    .founder-title h2 {
+        font-size: 42px;
+        font-size: 54px;
+        font-weight: 800;
+        color: #0d47a1;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+    }
+
+    .founder-title p {
+        color: #666;
+        font-size: 18px;
+    }
+
+.founder-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.founder-image {
+    flex: 1;
+}
+
+    .founder-image img {
+        width: 80%;
+        max-width: 450px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+.founder-text {
+    flex: 1;
+}
+
+    .founder-text h3 {
+        font-size: 32px;
+        color: #1e2a5a;
+        margin-bottom: 20px;
+    }
+
+    .founder-text p {
+        color: #555;
+        line-height: 1.8;
+        margin-bottom: 15px;
+    }
+
+.founder-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 30px;
+    background: #0d6efd;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+    .founder-btn:hover {
+        transform: translateY(-3px);
+    }
+
+/* =====================================================
+   FOUNDER MESSAGE SECTION END
+===================================================== */
+
+/* =========================================
+    WHY CHOOSE SOFT TEACH INVENTORS START
+========================================= */
+
+.why-section {
+    padding: 100px 40px;
+    background: #ffffff;
+}
+
+.why-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+    .why-title h2 {
+        font-size: 54px;
+        font-weight: 800;
+        color: #0d47a1;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+    }
+
+    .why-title p {
+        font-size: 18px;
+        color: #666;
+    }
+
+.why-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.why-card {
+    background: white;
+    padding: 35px 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    margin-top: -40px;
+}
+
+    .why-card:hover {
+        transform: translateY(-10px);
+    }
+
+    .why-card i {
+        font-size: 40px;
+        color: #0d6efd;
+        margin-bottom: 20px;
+    }
+
+    .why-card h3 {
+        font-size: 24px;
+        color: #1e2a5a;
+        margin-bottom: 20px;
+    }
+
+    .why-card ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+        .why-card ul li {
+            margin-bottom: 12px;
+            color: #555;
+            font-size: 16px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+            .why-card ul li::before {
+                content: "✓";
+                position: absolute;
+                left: 0;
+                color: #0d6efd;
+                font-weight: bold;
+            }
+
+/* MOBILE */
+
+@media (max-width: 992px) {
+
+    .why-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .why-container {
+        grid-template-columns: 1fr;
+    }
+
+    .why-title h2 {
+        font-size: 32px;
+    }
+}
+
+/* =========================================
+    WHY CHOOSE SOFT TEACH INVENTORS END
+========================================= */
+
+
+/* =====================================================
+  OUR PUBLICATIONS START
+===================================================== */
+.book-categories {
+    padding: 60px 0%;
+    background: #f5f9ff;
+}
+
+.book-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+    .book-title h2 {
+        font-size: 54px;
+        font-weight: 800;
+        color: #0d47a1;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+    }
+
+    .book-title p {
+        color: #666;
+        font-size: 18px;
+    }
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.category-card {
+    background: #f8faff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: 0.4s;
+}
+
+    .category-card:hover {
+        transform: translateY(-10px);
+    }
+
+.category-image {
+    height: 220px;
+    overflow: hidden;
+    clip-path: polygon( 0 0, 100% 0, 100% 72%, 0 100% );
+}
+
+    .category-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+.category-content {
+    padding: 25px;
+}
+
+    .category-content h3 {
+        font-size: 22px;
+        color: #4b4a8f;
+        margin-bottom: 15px;
+    }
+
+.category-age {
+    font-weight: 700;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.category-content p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.category-content a {
+    color: #4b4a8f;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+    .category-content a:hover {
+        color: #0d6efd;
+    }
+
+@media(max-width:1200px) {
+    .category-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width:768px) {
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* =====================================================
+   OUR PUBLICATIONS SECTION END
+===================================================== */
+
+/* =========================================
+ OUR LEARNING RESOUCES START
+========================================= */
+
+.categories-section {
+    padding: 60px 0%;
+    background: #ffffff;
+}
+
+.categories-header {
+    text-align:center;
+    margin-bottom: 35px;
+}
+
+    .categories-header h2 {
+        font-size: 54px;
+        font-weight: 800;
+        color: #0d47a1;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+    }
+
+    .categories-header p {
+        color: #666;
+        font-size: 18px;
+    }
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.category-card {
+    background: #fff;
+    transition: 0.3s;
+}
+
+    .category-card:hover {
+        transform: translateY(-8px);
+    }
+
+    .category-card h3 {
+        font-size: 28px;
+        color: #1e2a5a;
+        margin-bottom: 15px;
+    }
+
+    .category-card p {
+        color: #666;
+        line-height: 1.8;
+        margin-bottom: 20px;
+    }
+
+    .category-card a {
+        color: #0d6efd;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+
+    .category-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+
+/* Responsive */
+
+@media(max-width:991px) {
+    .categories-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width:768px) {
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .categories-header h2 {
+        font-size: 38px;
+    }
+}
+/* =====================================================
+   OUR LEARNING RESOUCES END
+===================================================== */
+
+/* =============================
+   OUR BOOKS SECTION START
+================================ */
+.books-section {
+    padding: 60px 0;
+    background: #f5f9ff;
+}
+
+/* SECTION TITLE */
+
+.books-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+    .books-title h1 {
+        font-size: 50px;
+        font-weight: 800;
+        color: #0d47a1;
+        margin-bottom: 15px;
+    }
+
+    .books-title p {
+        font-size: 20px;
+        color: #666;
+    }
+
+/* BOOK CARD*/
+
+.book-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 25px;
+    text-align: center;
+    height: 100%;
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+    .book-card:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+
+    /* BOOK IMAGE*/
+
+    .book-card img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: 25px;
+        transition: 0.4s;
+    }
+
+    .book-card:hover img {
+        transform: scale(1.08);
+    }
+
+    /*BOOK TITLE*/
+
+    .book-card h3 {
+        color: #0d47a1;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    /*BOOK DESCRIPTION */
+
+    .book-card p {
+        color: #666;
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+/*BUTTON*/
+
+.book-btn,
+.tech-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background: linear-gradient(135deg,#ff4da6,#ff2d8d);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+    .book-btn:hover,
+    .tech-btn:hover {
+        transform: translateY(-3px);
+        color: white;
+    }
+
+/* =============================
+   OUR BOOKS SECTION END
+================================ */
+
+/* =========================================
+   TECHNOLOGY SUPPORTS SECTION START
+========================================= */
+.tech-section {
+    padding: 60px 0;
+    background: #ffffff;
+}
+
+/*SECTION TITLE*/
+
+.tech-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+    .tech-title h1 {
+        font-size: 50px;
+        font-weight: 800;
+        color: #0d47a1;
+        margin-bottom: 15px;
+    }
+
+    .tech-title p {
+        font-size: 20px;
+        color: #666;
+    }
+
+/* TECH CARD*/
+
+.tech-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 25px;
+    text-align: center;
+    height: 100%;
+    transition: 0.4s;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+    /*HOVER EFFECT*/
+
+    .tech-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    /*TECHI IMAGE*/
+
+    .tech-card img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: 25px;
+    }
+
+    /*BOOK TITLE */
+
+    .tech-card h3 {
+        color: #0d47a1;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    /*TECH DESCRIPTION*/
+
+    .tech-card p {
+        color: #666;
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 25px;
+    }
+
+/* BUTTON*/
+
+.tech-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background: #ff4da6;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+    .tech-btn:hover {
+        background: #ff2d8d;
+        color: white;
+    }
+
+/* =========================================
+   TECHNOLOGY SUPPORTS SECTION END
+========================================= */
+
+/* ============================= /
+/ SCHOOL CHAT SECTION START
+/ ============================= */
+
+.schoolchat-section {
+    background: #f5f5f5;
+    padding: 100px 50px;
+}
+
+.schoolchat-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.schoolchat-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+    .schoolchat-text h1 {
+        font-size: 54px;
+        font-weight: 800;
+        color: #0d47a1;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+    }
+
+    .schoolchat-text p {
+        font-size: 24px;
+        color: #555;
+        line-height: 1.8;
+        margin-bottom: 40px;
+    }
+
+.download-btn {
+    background: #ff4da6;
+    color: white;
+    padding: 18px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 22px;
+    transition: 0.3s;
+}
+
+    .download-btn:hover {
+        background: #e60073;
+    }
+
+.schoolchat-image {
+    flex: 1;
+    text-align: center;
+}
+
+    .schoolchat-image img {
+        width: 450px;
+        max-width: 100%;
+        border-radius: 25px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+/* =========================================================
+   SCHOOL CHAT SECTION END
+========================================================= */
+
+/* =========================================
+CTA SECTION START
+=========================================*/
+
+.cta-section {
+    padding: 100px 10%;
+    background: linear-gradient(135deg, #1e2a5a, #0d6efd);
+    text-align: center;
+}
+
+.cta-content h2 {
+    color: white;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.cta-content p {
+    color: rgba(255,255,255,0.9);
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    line-height: 1.8;
+}
+
+.cta-btn {
+    display: inline-block;
+    background: white;
+    color: #1e2a5a;
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+    .cta-btn:hover {
+        transform: translateY(-5px);
+    }
+/* =========================================
+CTA SECTION END
+=========================================*/
+
+/* =========================================================
+  OUR PUBLISHING START
+========================================================= */
+.process-section {
+    padding: 100px 10%;
+    background: #f8f9ff;
+}
+
+.process-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+    .process-title h2 {
+        font-size: 54px;
+        font-weight: 800;
+        color: #0d47a1;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+    }
+
+    .process-title p {
+        color: #666;
+    }
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.process-card {
+    background: white;
+    padding: 35px 25px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+    .process-card:hover {
+        transform: translateY(-10px);
+    }
+
+.step-number {
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    border-radius: 50%;
+    background: linear-gradient(135deg,#0d6efd,#4facfe);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 70px;
+    margin-bottom: 20px;
+}
+
+.process-card h3 {
+    color: #1e2a5a;
+    margin-bottom: 15px;
+}
+
+/* =========================================================
+  OUR PUBLISHING END
+========================================================= */
+
+
+/* =========================================================
+   SERVICES SECTION START
+========================================================= */
+
+.services-section {
+    padding: 100px 50px;
+    background: #0d47a1;
+    text-align: center;
+}
+
+    .services-section h2 {
+        font-size: 54px;
+        font-weight: 800;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+    }
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background: white;
+    width: 280px;
+    padding: 40px 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: all 0.4s ease;
+}
+
+    .service-card:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+
+        .service-card:hover h3 {
+            color: #ff4da6;
+        }
+
+    .service-card h3 {
+        color: #0d47a1;
+        font-size: 26px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .service-card p {
+        color: #555;
+        line-height: 1.6;
+    }
+
+/* ===================================
+  SERVICES SECTION END
+======================================*/
+
+/* =========================================
+   COUNTER SECTION START
+========================================= */
+
+.counter-section {
+    padding: 80px 40px;
+    background: linear-gradient(135deg,#0d6efd,#4f8cff);
+}
+
+.counter-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+}
+
+.counter-box {
+    text-align: center;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 35px 20px;
+    transition: all 0.3s ease;
+}
+
+    .counter-box:hover {
+        transform: translateY(-8px);
+        background: rgba(255,255,255,0.2);
+    }
+
+    .counter-box h2 {
+        color: white;
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .counter-box p {
+        color: white;
+        font-size: 18px;
+        margin: 0;
+    }
+
+/* MOBILE */
+
+@media(max-width:768px) {
+
+    .counter-container {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width:500px) {
+
+    .counter-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================
+   COUNTER SECTION END
+========================================= */
+
+/* ==========================================
+   MEET OUR TEAM SECTION START
+========================================== */
+
+.team-section {
+    padding: 100px 10%;
+    background: #f8f9ff;
+}
+
+.team-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+    .team-title h2 {
+        font-size: 54px;
+        font-weight: 800;
+        color: #0d47a1;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+    }
+
+    .team-title p {
+        color: #666;
+    }
+
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+
+.team-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+    .team-card:hover {
+        transform: translateY(-10px);
+    }
+
+    .team-card img {
+        width: 80%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .team-card h3 {
+        margin: 20px 0 10px;
+        color: #1e2a5a;
+    }
+
+    .team-card p {
+        padding: 0 20px 20px;
+        color: #666;
+    }
+
+@media(max-width:768px) {
+    .team-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================
+   MEET OUR TEAM SECTION END
+========================================== */
+
+/* =====================================================
+   LATEST NEWS SECTION START
+===================================================== */
+
+.news-section {
+    padding: 80px 0%;
+    background: #f8faff;
+}
+
+.news-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+    .news-title h2 {
+        font-size: 54px;
+        font-weight: 800;
+        color: #0d47a1;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+    }
+
+    .news-title p {
+        color: #666;
+        font-size: 18px;
+    }
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.news-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    border:1px solid rgba(0,0,0,0,05);
+    display:flex;
+    flex-direction:column;
+    height:100%;
+}
+
+    .news-card:hover {
+        transform: translateY(-10px);
+    }
+
+    .news-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+.news-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex:1;
+}
+
+.news-date {
+    color: #0d6efd;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.news-content h3 {
+    color: #1e2a5a;
+    margin: 15px 0;
+    font-size: 22px;
+}
+
+.news-content p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.news-btn {
+    display: inline-block;
+    width:auto;
+    align-self:flex-start;
+    background: linear-gradient(135deg,#ff4da6,#ff2d8d);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+    .news-btn:hover {
+        background: linear-gradient(135deg,#ff2d8d,#ff4da6);
+        color: white;
+        transform: translateY(-3px);
+    }
+
+/* =====================================================
+   LATEST NEWS SECTION END
+===================================================== */
+/* ==========================================
+   WHY SOFT TEACH INVENTORS IS DIFFERENT START
+========================================== */
+
+.different-section {
+    padding: 100px 10%;
+    background-image: linear-gradient( rgba(255,255,255,0.30), rgba(255,255,255,0.30) ), url('/images/education-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top:70;
+    position:relative;
+    margin-top:20px;
+}
+
+.different-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+    .different-title h2 {
+        font-size: 54px;
+        font-weight: 800;
+        color: #0d47a1;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+    }
+
+    .different-title p {
+        color: #666;
+        font-size: 18px;
+    }
+
+.different-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.different-card {
+    background: rgba(255,255,255,0.80);
+    backdrop-filter: blur(10px);
+    padding: 35px 25px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+    .different-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+
+    .different-card i {
+        font-size: 45px;
+        color: #0d6efd;
+        margin-bottom: 20px;
+    }
+
+    .different-card h3 {
+        color: #1e2a5a;
+        margin-bottom: 15px;
+        font-size: 24px;
+    }
+
+    .different-card p {
+        color: #666;
+        line-height: 1.8;
+    }
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 992px) {
+
+    .different-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .different-container {
+        grid-template-columns: 1fr;
+    }
+
+    .different-title h2 {
+        font-size: 32px;
+    }
+}
+
+/* ==========================================
+   WHY SOFT TEACH INVENTORS IS DIFFERENT END
+========================================== */
+
+/* ==========================================
+   OUR VISION & MISSION START
+========================================== */
+
+.vision-section {
+    padding: 100px 10%;
+    background: #f8f9ff;
+}
+
+.vision-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+    .vision-title h2 {
+        font-size: 54px;
+        font-weight: 800;
+        color: #0d47a1;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+    }
+
+    .vision-title p {
+        color: #666;
+        font-size: 18px;
+    }
+
+.vision-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+}
+
+.vision-card {
+    background: #f8faff;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+    .vision-card:hover {
+        transform: translateY(-10px);
+    }
+
+    .vision-card i {
+        font-size: 50px;
+        color: #0d6efd;
+        margin-bottom: 20px;
+    }
+
+    .vision-card h3 {
+        color: #1e2a5a;
+        margin-bottom: 15px;
+    }
+
+    .vision-card p {
+        color: #666;
+        line-height: 1.8;
+    }
+
+@media(max-width:768px) {
+
+    .vision-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================
+   OUR VISION & MISSION END
+========================================== */
+/* ===================================
+  FAQ SECTION START
+======================================*/
+.faq-section {
+    padding: 80px 10%;
+    background: #ffffff;
+}
+
+.faq-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+    .faq-title h2 {
+        font-size: 54px;
+        font-weight: 800;
+        color: #0d47a1;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+    }
+
+    .faq-title p {
+        color: #666;
+    }
+
+.faq-container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+    .faq-container details {
+        background: white;
+        margin-bottom: 15px;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        cursor: pointer;
+    }
+
+    .faq-container summary {
+        font-size: 20px;
+        font-weight: 600;
+        color: #1e2a5a;
+        list-style: none;
+    }
+
+    .faq-container p {
+        margin-top: 15px;
+        color: #555;
+        line-height: 1.8;
+    }
+/* ===================================
+  FAQ SECTION END
+======================================*/
+/* =========================================================
+   CONTACT SECTION START
+========================================================= */
+.contact-section {
+    padding: 100px 50px;
+    background: #f8f9fa;
+    text-align: center;
+}
+
+    .contact-section h2 {
+        font-size: 54px;
+        font-weight: 800;
+        color: #0d47a1;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+    }
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-box {
+    background: white;
+    width: 280px;
+    padding: 40px 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: all 0.4s ease;
+}
+
+    .contact-box:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+
+    .contact-box h3 {
+        color: #3b82f6;
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+
+    .contact-box p {
+        color: #555;
+    }
+/* ==============================
+   CONTACT SECTION END
+================================= */
+/* ============================= /
+/ PROFESSIONAL FOOTER START
+/ ============================= */
+
+.pro-footer {
+    background: #24126a;
+    color: white;
+    padding-top: 60px;
+    margin-top: 80px;
+}
+
+.footer-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.footer-box {
+    flex: 1;
+    min-width: 250px;
+}
+
+    .footer-box h2 {
+        font-size: 28px;
+        margin-bottom: 25px;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+        padding-bottom: 10px;
+    }
+
+    .footer-box p {
+        line-height: 1.8;
+        color: #dcdcdc;
+        margin-bottom: 15px;
+    }
+
+    .footer-box span {
+        color: #ff8c42;
+        font-weight: bold;
+    }
+
+    .footer-box ul {
+        list-style: none;
+        padding: 0;
+    }
+
+        .footer-box ul li {
+            margin-bottom: 15px;
+        }
+
+            .footer-box ul li a {
+                color: white;
+                text-decoration: none;
+                transition: 0.3s;
+            }
+
+                .footer-box ul li a:hover {
+                    color: #ff8c42;
+                    padding-left: 5px;
+                }
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 15px;
+    padding: 15px 0;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    color: #cfcfcf;
+}
+.footer-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+    .footer-social a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 45px;
+        height: 45px;
+        margin-right: 10px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.1);
+        color: white;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+        .footer-social a:hover {
+            background: #ff4da6;
+            transform: translateY(-5px);
+        }
+
+    .footer-social i {
+        font-size: 18px;
+    }
+/* ============================= /
+/ PROFESSIONAL FOOTER END
+/ ============================= */
+
+/* ============================= /
+/ OUR PROGRAM START
+/ ============================= */
+
+.programs-section {
+    padding: 100px 0;
+    background: #f8fbff;
+}
+
+.programs-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+    .programs-header h2 {
+        font-size: 50px;
+        color: #2563eb;
+        font-weight: 700;
+    }
+
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+}
+
+.program-card {
+    background: #fff;
+    padding: 40px 25px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+}
+
+    .program-card h3 {
+        color: #2563eb;
+        margin-bottom: 15px;
+    }
+/* ============================= /
+/    OUR PROGRAM END
+/ ============================= */
